@@ -1,0 +1,290 @@
+controler <=> service | <=> server (db)
+compouter   | somewhtere inthe world (not in your computer)
+
+time taken for communcating between controller to service -> lesses (microsecds)
+time taken for communicated between service and server -> more(milliseconds)
+
+Two way of coding
+ 1. return the ajax call itself - traditional coding 
+ 2. use $q library from angular and overrride the delay
+
+
+ will give 4 information
+ $index -> position of the row
+ $first
+ $last
+ $odd
+ $even
+
+
+ populated student from controller to html -> one way binding
+ contorller -> student -> html -> one way
+ controller <- variable -> html -> two way binding -> ng-model
+
+
+ agnularjs developerss -> google
+ ui angular developers -> thirdparty developers 
+        ->ui router
+        -> ui bootstrap
+            ->  ui grid (datatables)
+
+            1. read -> list the students
+            2. create -> create a student -> the form fields will be empty
+            3. update -> update a student -> the form fields will be prefilled
+            4. delete -> remove the student from the list
+
+            Aim 
+                1. reduce the number of api calls -> keep a temporary memory stoage in student ervice -> create a vriable and store
+                2. reduce the number of coding -> easy to debug -> easy to features in future 
+                    -> reduce the pages
+
+                    / -> home -> list my students and ability to delete
+                    /student -> ability to create
+                    /student/:id -> ability to update
+            
+
+
+
+
+    old project 
+
+        home page (read) -> its making an api call to the backend
+        create button-> create page -> fill the name and marks -> api call to save -> back to dashboard
+        update button in the row -> update page -> api call to get the specifc student -> fill the name and marks-> alter the name and marks -> api to save -> back to dashboard
+        delete button -> confirmation message -> delete teh student -> reload
+
+
+        old proeject -> create.html crate.js update.html update.js
+                    update.html?id=""
+
+        angular & ui router -> student    ->student.tpl.htm & student.controler
+                            -> student/:id ->student.tpl.html & student.controller
+
+                        -> confirm whetehre we are in update mode or create mode
+                            ->if you get some value in id -> updat emode
+                            -> if you dont get any value in id -> create mode
+                            -> The valud of id $stateParams
+
+Two way of coding
+ 1. return the ajax call itself - traditional coding  -> already coded its in bak file -> return $http
+ 2. use $q library from angular and overrride the delay
+    -> $q.defer() -> intermediate between your controller and service http call     
+                    -> success -> resolve
+                    -> error -> reject
+                    -> on complete (either success or error has achieved) -> promise -> return  promise
+                -> / loaded
+                    -> collect list of students by api call
+                -> avoid multiple api calls on navigation
+                    -> create button -> /student page -> click on back to dashboard button -> / home 
+                        -> agian a api  call is made -> to collect the list of students -> which i dont want...
+
+-> to avoid multiple api calls -> 
+    -> create a temporary variable 
+    if(temporary variable is empty){ //initially eveything wil be empty // page load
+        -> make api call
+        -> map success data to resolve
+    -> store the data in that temporary variable 
+    -> return deferred.promise
+    }else{ // When i navigate // temporary variable is not empty
+        map temporary varibale to resolve
+        return deferred.promise
+    }
+
+
+
+
+our project
+angular 1.7
+bootstrap 4.x was coded by default with jquery - not coded with angular 1.x but available with available 2.x
+
+bootstrap 3.x -> available for angular 1.x -> ui bootstrap
+
+
+
+
+directives  -> set of html codes -> you can use multiple places with least changes
+defined in 3 ways
+-> your design and functionalities do not change
+
+
+
+
+
+
+
+attribute <div student-btn >
+element <student-btn
+class <div class="student-btn"
+
+
+
+
+
+
+Database <-> Server <-> Chrome  -> 2008
+save data <-> Codes <-> view
+    DB <->   Model - controller - view       <-> View ->2011
+
+    DB<-> Model<-> Controller<->View <-> Model <-> Controller <->View -> 2014 (Backbone, angular, react)
+                                           srv
+
+
+Revision of technologies ->
+h1 -> heading 1 -> bold, bigger in size (standard)
+article, header, i -> italic
+html 4
+html 5
+
+js -> ecma 5.0
+var
+
+this-> function 
+doesnt have class -> OOP
+
+you divide your code into subparts
+extend
+
+superset of js (ECMA 6)-> typescript -> microsoft
+let
+const
+class
+
+1.controller -> html file
+2. Service -> Server / Factory -> Complicated code
+3. directive -> set of html
+4. filter -> alter the data just before they are displayed
+
+scss -> short hand format of writing css
+grunt / gulp -> task runners
+git -> to share codes
+
+
+
+open facebook-> login -> close the facebook  -> after shut too..
+-> remember me
+reopen the facebook -> login page or direct to you account
+login credentials are stored in form of a string (random) -> cookie
+
+Cookie -> clear browsing history
+ -> deleting the cookies
+
+cookies are only 4kb data
+
+Session Storage -> alive till you close the browser
+Local Storage -> till you clear browsing history
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

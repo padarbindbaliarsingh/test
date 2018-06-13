@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <button class="btn btn-primary float-right" ui-sref="home">Back to Dashboard</button>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="">Student Name</label>
+                <input type="text" class="form-control" ng-model="student.name">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="">Roll No</label>
+                <input type="text" class="form-control" ng-model="student.rollNo">
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <button type="button" class="btn btn-primary float-right" ng-click="save()">Save</button>
+        </div>
+    </div>
+</div>
